@@ -1,8 +1,10 @@
 local cmp = require('cmp')
+local luasnip = require('luasnip')
 
 cmp.setup({
   sources = {
     {name = 'nvim_lsp'},
+    {name = 'luasnip'}
   },
   mapping = cmp.mapping.preset.insert({
     -- Navigate between completion items

@@ -13,7 +13,7 @@ ls.add_snippets("tex", { snip1 }, {
 })
 
 local snip2 = ls.parser.parse_snippet(
-  { trig = "ssec", name = "Sub-section", priority = 10 },
+  { trig = "subsec", name = "Sub-section", priority = 10 },
   "\\subsection*{$1}$0"
 )
 ls.add_snippets("tex", { snip2 }, {

@@ -1,4 +1,5 @@
 local ls = require("luasnip")
+ls.config.setup({ enable_autosnippets = true })
 -- local s = ls.snippet
 -- local t = ls.text_node
 -- local i = ls.insert_node

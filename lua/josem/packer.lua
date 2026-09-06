@@ -1,4 +1,4 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+-- This file can be loaded by calling `lua require(plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -28,26 +28,6 @@ return require('packer').startup(function(use)
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-            'williamboman/mason.nvim',
-            run = function()
-                pcall(vim.cmd, 'MasonUpdate')
-            end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
-    }
-}
 use {
     'numToStr/Comment.nvim',
     config = function()
@@ -55,7 +35,11 @@ use {
     end
 }
 
-use 'simrat39/rust-tools.nvim'
+use {
+  'mrcjkb/rustaceanvim',
+  version = '^5', -- Recomendado para Neovim >= 0.10
+  ft = { 'rust' },
+}
 use({
     "Pocco81/auto-save.nvim",
     config = function()
@@ -78,15 +62,16 @@ use {
 }
 
 use {
+  'neovim/nvim-lspconfig',
+  'mason-org/mason.nvim',
+  "mason-org/mason-lspconfig.nvim",
+}
+use {
     {'folke/tokyonight.nvim'},
-    {'neovim/nvim-lspconfig'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
-    {'williamboman/mason.nvim'},
-    {'williamboman/mason-lspconfig.nvim'},
+    {'saadparwaiz1/cmp_luasnip'}
 }
-
--- use "rafamadriz/friendly-snippets"
 
 use({
 	"L3MON4D3/LuaSnip",
