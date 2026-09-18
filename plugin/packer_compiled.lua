@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/josem/.cache/nvim/packer_hererocks/2.1.1787165859/share/lua/5.1/?.lua;/home/josem/.cache/nvim/packer_hererocks/2.1.1787165859/share/lua/5.1/?/init.lua;/home/josem/.cache/nvim/packer_hererocks/2.1.1787165859/lib/luarocks/rocks-5.1/?.lua;/home/josem/.cache/nvim/packer_hererocks/2.1.1787165859/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/josem/.cache/nvim/packer_hererocks/2.1.1787165859/lib/lua/5.1/?.so"
+local package_path_str = "/home/josem/.cache/nvim/packer_hererocks/2.1.1788856981/share/lua/5.1/?.lua;/home/josem/.cache/nvim/packer_hererocks/2.1.1788856981/share/lua/5.1/?/init.lua;/home/josem/.cache/nvim/packer_hererocks/2.1.1788856981/lib/luarocks/rocks-5.1/?.lua;/home/josem/.cache/nvim/packer_hererocks/2.1.1788856981/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/josem/.cache/nvim/packer_hererocks/2.1.1788856981/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -179,6 +179,11 @@ _G.packer_plugins = {
     path = "/home/josem/.local/share/nvim/site/pack/packer/opt/rustaceanvim",
     url = "https://github.com/mrcjkb/rustaceanvim"
   },
+  ["telescope-luasnip.nvim"] = {
+    loaded = true,
+    path = "/home/josem/.local/share/nvim/site/pack/packer/start/telescope-luasnip.nvim",
+    url = "https://github.com/benfowler/telescope-luasnip.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/josem/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -207,10 +212,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: luasnip-latex-snippets.nvim
-time([[Config for luasnip-latex-snippets.nvim]], true)
-try_loadstring("\27LJ\2\n¶\1\0\0\3\0\a\0\0206\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\4\0009\0\2\0005\2\5\0B\0\2\0016\0\0\0'\2\3\0B\0\2\0029\0\4\0009\0\2\0005\2\6\0B\0\2\1K\0\1\0\1\0\1\19use_treesitter\2\1\0\1\24enable_autosnippets\2\vconfig\fluasnip\nsetup\27luasnip-latex-snippets\frequire\0", "config", "luasnip-latex-snippets.nvim")
-time([[Config for luasnip-latex-snippets.nvim]], false)
 -- Config for: auto-save.nvim
 time([[Config for auto-save.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14auto-save\frequire\0", "config", "auto-save.nvim")
@@ -223,6 +224,10 @@ time([[Config for kanagawa]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: luasnip-latex-snippets.nvim
+time([[Config for luasnip-latex-snippets.nvim]], true)
+try_loadstring("\27LJ\2\n¶\1\0\0\3\0\a\0\0206\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\4\0009\0\2\0005\2\5\0B\0\2\0016\0\0\0'\2\3\0B\0\2\0029\0\4\0009\0\2\0005\2\6\0B\0\2\1K\0\1\0\1\0\1\19use_treesitter\2\1\0\1\24enable_autosnippets\2\vconfig\fluasnip\nsetup\27luasnip-latex-snippets\frequire\0", "config", "luasnip-latex-snippets.nvim")
+time([[Config for luasnip-latex-snippets.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

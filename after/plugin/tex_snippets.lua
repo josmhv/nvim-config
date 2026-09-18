@@ -48,3 +48,57 @@ local snip6 = ls.parser.parse_snippet(
 ls.add_snippets("tex", { snip6 }, {
   type = "autosnippets",
 })
+
+local snip7 = ls.parser.parse_snippet(
+  { trig = "mcal", name = "Letra Caligrafica", condition = utils.pipe({ is_math }), priority = 10 },
+  "\\mathcal{$1}$0"
+)
+ls.add_snippets("tex", { snip7 }, {
+  type = "autosnippets",
+})
+
+local snip8 = ls.parser.parse_snippet(
+  { trig = "fun", name = "Funcion", condition = utils.pipe({ is_math }), priority = 10 },
+  "\\colon $1 \\to $0"
+)
+ls.add_snippets("tex", { snip8 }, {
+  type = "autosnippets",
+})
+
+local snip9 = ls.parser.parse_snippet(
+  { trig = "cc", name = "Sub set eq", condition = utils.pipe({ is_math }), priority = 10 },
+  "\\subseteq"
+)
+ls.add_snippets("tex", { snip9 }, {
+  type = "autosnippets",
+})
+
+local snip10 = ls.parser.parse_snippet(
+  { trig = "f-1", name = "f^-1 conjunto", condition = utils.pipe({ is_math }), priority = 10 },
+  "f^{-1}($1)$0"
+)
+ls.add_snippets("tex", { snip10 }, {
+  type = "autosnippets",
+})
+local snip12 = ls.parser.parse_snippet(
+  { trig = "g-1", name = "g^-1 conjunto", condition = utils.pipe({ is_math }), priority = 10 },
+  "g^{-1}($1)$0"
+)
+ls.add_snippets("tex", { snip12 }, {
+  type = "autosnippets",
+})
+local snip13 = ls.parser.parse_snippet(
+  { trig = "h-1", name = "h^-1 conjunto", condition = utils.pipe({ is_math }), priority = 10 },
+  "h^{-1}($1)$0"
+)
+ls.add_snippets("tex", { snip13 }, {
+  type = "autosnippets",
+})
+
+local snip11 = ls.parser.parse_snippet(
+  { trig = "borel", name = "Borelianos de R", condition = utils.pipe({ is_math }), priority = 10 },
+  "\\mathcal{B}(\\mathbb{R})"
+)
+ls.add_snippets("tex", { snip11 }, {
+  type = "autosnippets",
+})
