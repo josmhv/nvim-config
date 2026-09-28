@@ -102,3 +102,42 @@ local snip11 = ls.parser.parse_snippet(
 ls.add_snippets("tex", { snip11 }, {
   type = "autosnippets",
 })
+
+
+local snip12 = ls.parser.parse_snippet(
+  { trig = "nsubgr", name = "Subgrupo Normal", condition = utils.pipe({ is_math }), priority = 10 },
+  "\\triangleleft $1"
+)
+ls.add_snippets("tex", { snip12 }, {
+  type = "autosnippets",
+})
+
+
+-- local snip13 = ls.parser.parse_snippet(
+--   { trig = "-i", name = "Itemizar", priority = 10 },
+--   "\\begin{itemize}"+
+--         "\\item $0 "+
+--   "\\end{itemize}"
+-- )
+-- ls.add_snippets("tex", { snip13 }, {
+--   -- type = "autosnippets",
+-- })
+
+
+local snip14 = ls.parser.parse_snippet(
+  { trig = "c<", name = "Sub conjunto al reves", condition = utils.pipe({ is_math }), priority = 10 },
+  "\\supseteq $1"
+)
+ls.add_snippets("tex", { snip14 }, {
+  -- type = "autosnippets",
+})
+
+
+
+local snip15 = ls.parser.parse_snippet(
+  { trig = ".*", name = "Multiplicacion con punto", condition = utils.pipe({ is_math }), priority = 10 },
+  "\\cdot $1"
+)
+ls.add_snippets("tex", { snip15 }, {
+  type = "autosnippets",
+})
