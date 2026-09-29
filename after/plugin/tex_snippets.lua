@@ -141,3 +141,12 @@ local snip15 = ls.parser.parse_snippet(
 ls.add_snippets("tex", { snip15 }, {
   type = "autosnippets",
 })
+
+
+local snip16 = ls.parser.parse_snippet(
+  { trig = "Oprod", name = "Sigma algebra producto", condition = utils.pipe({ is_math }), priority = 10 },
+  "\\bigotimes_{$1=$2}^{$3} $0"
+)
+ls.add_snippets("tex", { snip16 }, {
+  type = "autosnippets",
+})
